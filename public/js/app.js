@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ngDay2App', [
+  .module('JerkStoreApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -9,6 +9,8 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+
+    //routes for blog tab
       .when('/', {
         templateUrl: 'views/main.html'
       })
@@ -28,6 +30,13 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
+
+      //routes for shopping cart tab 
+
+      //routes for reviews tab 
+
+      //routes for admin tab 
+
       .otherwise({
         redirectTo: '/'
       });

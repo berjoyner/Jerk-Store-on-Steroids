@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('ngDay2App')
+//controller for blog 
+
+angular.module('JerkStoreApp')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
 
     $scope.createPost = function() {
@@ -25,3 +27,11 @@ angular.module('ngDay2App')
   	};
 
   });
+
+  //controller for shopping cart 
+
+  //controller for reviews
+
+  //controller for admin 
+
+

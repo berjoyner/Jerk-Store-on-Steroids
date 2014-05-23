@@ -1,5 +1,5 @@
 'use strict';
-angular.module('ngDay2App')
+angular.module('JerkStoreApp')
 	.factory('PostsSvc', function($resource) {
 		return $resource('api/collections/demotiy',
 			{},
