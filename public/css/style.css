@@ -7,8 +7,18 @@ a {
   color: #00B7FF;
 }
 
-h1 {
-	margin-left: 40px;
+.jumbotron {
+	margin-top: 50px;
+}
+
+.jumbotron h1 {
+	margin-left: 90px;
+}
+
+.jumbotron img {
+	width:200px;
+	height:200px;
+	margin-left: 200px;
 }
 
 .blogbuttonz ul >li{
@@ -25,5 +35,21 @@ h1 {
 .createbuttonz p {
 
 	font-size: 40px;
+	font-family: 'Karla', sans-serif;
+}
+
+.editbuttonz p {
+	font-size: 30px;
+	font-family: 'Karla', sans-serif;
+}
+
+.changingbuttonz ul >li{
+	text-decoration: none;
+	list-style-type: none;
+	font-size:20px;
+}
+
+.changingbuttonz p {
+	font-size: 30px;
 	font-family: 'Karla', sans-serif;
 }

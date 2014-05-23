@@ -9,8 +9,6 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-
-    //routes for blog tab
       .when('/', {
         templateUrl: 'views/main.html'
       })
@@ -30,13 +28,14 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
-
-      //routes for shopping cart tab 
-
-      //routes for reviews tab 
-
-      //routes for admin tab 
-
+      .when ('/admin', {
+        templateUrl: 'views/admin-main.html'
+        controller: 'AdminCtrl'
+      })
+      .when ('/jerkshop', {
+        templateUrl: 'views/jerkshop.html'
+        controller: 'AdminCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
