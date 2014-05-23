@@ -14,6 +14,8 @@ angular.module('JerkStoreApp')
     };
     $scope.posts = PostsSvc.query();
   })
+
+  //cont
   .controller('PostCtrl', function($scope, $location, $routeParams, PostSvc) {
 
   	$scope.post = PostSvc.show({ id: $routeParams.id });
