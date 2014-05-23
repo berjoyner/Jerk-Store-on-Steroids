@@ -29,7 +29,7 @@ angular.module('JerkStoreApp')
   })
    .controller('AdminCtrl', function ($scope, $location, AdminSvc) {
     $scope.createProduct = function() {
-      $location.path('/admin-main');
+      $location.path('/admin');
     };
     $scope.newProduct = function(product) {
       AdminSvc.create(product)

@@ -29,11 +29,11 @@ angular
         controller: 'PostCtrl'
       })
       .when ('/admin', {
-        templateUrl: 'views/admin-main.html'
+        templateUrl: 'views/admin-main.html',
         controller: 'AdminCtrl'
       })
       .when ('/jerkshop', {
-        templateUrl: 'views/jerkshop.html'
+        templateUrl: 'views/jerkshop.html',
         controller: 'AdminCtrl'
       })
       .otherwise({
