@@ -12,13 +12,13 @@ a {
 }
 
 .jumbotron h1 {
-	margin-left: 90px;
+	margin-left: 280px;
 }
 
 .jumbotron img {
 	width:200px;
 	height:200px;
-	margin-left: 200px;
+	margin-left: 400px;
 }
 
 .blogbuttonz ul >li{
@@ -58,7 +58,6 @@ a {
 	text-decoration: none;
 	list-style-type: none;
 	font-size:20px;
-
 }
 
 .editbuttonz img {
@@ -66,8 +65,15 @@ a {
 	height:200px;
 }
 
-.productlist img{
+.productlist h2 >img{
 	width:200px;
 	height:200px;
+}
 
+.jerkHeader {
+	margin-left: 400px;
+}
+
+.headerbtn {
+	margin-left: 550px;
 }

@@ -55,32 +55,33 @@ angular.module('JerkStoreApp')
     };
   });
 
-  // .controller('AdminsCtrl', function ($scope, $location, AdminsSvc) {
-  //   $scope.createProduct = function() {
-  //     console.log("here");
-  //     $location.path('/jerkshop');
-  //   };
-  //   $scope.newProduct = function(product) {
-  //     AdminsSvc.new(product)
-  //     console.log("here");
-  //     $location.path('/jerkshop');
-  //   };
-  //   $scope.products = AdminsSvc.query();
-  // });
-  // .controller('AdminCtrl', function($scope, $location, $routeParams, AdminSvc) {
-
-  //   $scope.product = AdminSvc.show({ id: $routeParams.id });
-  //   $scope.delete = function() { 
-  //     AdminSvc.delete({ id: $routeParams.id });
-  //     $location.path('/jerkshop');
-  //   };
-  //   $scope.edit = function() {
-  //     AdminSvc.edit($scope.product);
-  //     $location.path('/jerkshop');
-  //   };
-  // });
-
   //controller for shopping cart 
+
+  angular.module('JerkStoreApp')
+  .controller('JerkCartsCtrl', function ($scope, $location, JerkCartsSvc) {
+
+    $scope.createCart = function() {
+      $location.path('/newcart');
+    };
+    $scope.newCart = function(cart) {
+      JerkCartsSvc.create(cart)
+      $location.path('/cart');
+    };
+    $scope.carts = JerkCartsSvc.query();
+  })
+  .controller('JerkCartCtrl', function($scope, $location, $routeParams, JerkCartSvc) {
+
+    $scope.product = JerkCartSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
+      JerkCartSvc.delete({ id: $routeParams.id });
+      $location.path('/cart');
+    };
+    $scope.edit = function() {
+      JerkCartSvc.edit($scope.cart);
+      $location.path('/cart');
+    };
+  });
+
 
   //controller for reviews
 

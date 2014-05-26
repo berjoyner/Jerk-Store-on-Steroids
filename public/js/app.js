@@ -44,25 +44,22 @@ angular
         templateUrl: 'views/jerkshop-editDetail.html',
         controller: 'JerkProductCtrl'
       })
-
-
-
-      // .when ('/admin', {
-      //   templateUrl: 'views/admin-main.html',
-      //   controller: 'AdminsCtrl'
-      // })
-      // .when ('/jerkshop', {
-      //   templateUrl: 'views/jerkshop.html',
-      //   controller: 'AdminsCtrl'
-      // })
-      // .when('/admin/:id', {
-      //   templateUrl: 'views/jerkshop-detail.html',
-      //   controller: 'AdminCtrl'
-      // })
-      // .when('/admin/:id/edit', {
-      //   templateUrl: 'views/jerkshop-editDetail.html',
-      //   controller: 'AdminCtrl'
-      // })
+      .when('/cart', {
+        templateUrl: 'views/cart-list.html',
+        controller: 'JerkCartsCtrl'
+      })
+      .when('/newCart', {
+        templateUrl: 'views/cart-create.html',
+        controller: 'JerkCartsCtrl'
+      })
+      .when('/cart/:id', {
+        templateUrl: 'views/cart-detail.html',
+        controller: 'JerkCartCtrl'
+      })
+      .when('/cart/:id/edit', {
+        templateUrl: 'views/cart-editDetail.html',
+        controller: 'JerkCartCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
