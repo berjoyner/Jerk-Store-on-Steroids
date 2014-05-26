@@ -26,22 +26,63 @@ angular.module('JerkStoreApp')
   		PostSvc.edit($scope.post);
   		$location.path('/blog');
   	};
-  })
-   .controller('AdminCtrl', function ($scope, $location, AdminSvc) {
+  }) 
+
+  //controller for admin 
+
+  angular.module('JerkStoreApp')
+  .controller('JerkProductsCtrl', function ($scope, $location, JerkProductsSvc) {
+
     $scope.createProduct = function() {
-      $location.path('/admin');
+      $location.path('/newproduct');
     };
     $scope.newProduct = function(product) {
-      AdminSvc.newProduct(product)
-      $location.path('/jerkshop');
+      JerkProductsSvc.create(product)
+      $location.path('/product');
     };
-    $scope.product = AdminSvc.query();
+    $scope.products = JerkProductsSvc.query();
+  })
+  .controller('JerkProductCtrl', function($scope, $location, $routeParams, JerkProductSvc) {
+
+    $scope.product = JerkProductSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
+      JerkProductSvc.delete({ id: $routeParams.id });
+      $location.path('/product');
+    };
+    $scope.edit = function() {
+      JerkProductSvc.edit($scope.product);
+      $location.path('/product');
+    };
   });
+
+  // .controller('AdminsCtrl', function ($scope, $location, AdminsSvc) {
+  //   $scope.createProduct = function() {
+  //     console.log("here");
+  //     $location.path('/jerkshop');
+  //   };
+  //   $scope.newProduct = function(product) {
+  //     AdminsSvc.new(product)
+  //     console.log("here");
+  //     $location.path('/jerkshop');
+  //   };
+  //   $scope.products = AdminsSvc.query();
+  // });
+  // .controller('AdminCtrl', function($scope, $location, $routeParams, AdminSvc) {
+
+  //   $scope.product = AdminSvc.show({ id: $routeParams.id });
+  //   $scope.delete = function() { 
+  //     AdminSvc.delete({ id: $routeParams.id });
+  //     $location.path('/jerkshop');
+  //   };
+  //   $scope.edit = function() {
+  //     AdminSvc.edit($scope.product);
+  //     $location.path('/jerkshop');
+  //   };
+  // });
 
   //controller for shopping cart 
 
   //controller for reviews
 
-  //controller for admin 
 
 

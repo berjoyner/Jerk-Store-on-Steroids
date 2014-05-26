@@ -53,3 +53,21 @@ a {
 	font-size: 30px;
 	font-family: 'Karla', sans-serif;
 }
+
+.adminbuttonz ul >li{
+	text-decoration: none;
+	list-style-type: none;
+	font-size:20px;
+
+}
+
+.editbuttonz img {
+	width:200px;
+	height:200px;
+}
+
+.productlist img{
+	width:200px;
+	height:200px;
+
+}

@@ -19,16 +19,16 @@ angular.module('JerkStoreApp')
 				delete: { method: 'DELETE'}
 			});
 	})
-	.factory('AdminSvc', function($resource) {
-		return $resource('api/collections/jerkshop',
+	.factory('JerkProductsSvc', function($resource) {
+		return $resource('api/collections/products',
 			{},
 			{
 				query: { method: 'GET', isArray: true },
 				create: { method: 'POST'}
 			});
 	})
-	.factory('AdminSvc', function($resource) {
-		return $resource('api/collections/admin/:id',
+	.factory('JerkProductSvc', function($resource) {
+		return $resource('api/collections/products/:id',
 			{
 				id: '@_id'
 			},
@@ -36,6 +36,27 @@ angular.module('JerkStoreApp')
 				show: { method: 'GET'},
 				edit: { method: 'PUT'},
 				delete: { method: 'DELETE'}
-			});
-	});
+			}
+			)
+	})
+
+	// .factory('AdminsSvc', function($resource) {
+	// 	return $resource('api/collections/jerkshop',
+	// 		{},
+	// 		{
+	// 			query: { method: 'GET', isArray: true },
+	// 			create: { method: 'POST'}
+	// 		});
+	// })
+	// .factory('AdminSvc', function($resource) {
+	// 	return $resource('api/collections/jerkshop/:id',
+	// 		{
+	// 			id: '@_id'
+	// 		},
+	// 		{
+	// 			show: { method: 'GET'},
+	// 			edit: { method: 'PUT'},
+	// 			delete: { method: 'DELETE'}
+	// 		});
+	// })
 

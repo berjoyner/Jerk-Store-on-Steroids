@@ -28,14 +28,41 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
-      .when ('/admin', {
-        templateUrl: 'views/admin-main.html',
-        controller: 'AdminCtrl'
+       .when('/product', {
+        templateUrl: 'views/jerkshop-list.html',
+        controller: 'JerkProductsCtrl'
       })
-      .when ('/jerkshop', {
-        templateUrl: 'views/jerkshop.html',
-        controller: 'AdminCtrl'
+      .when('/newProduct', {
+        templateUrl: 'views/jerkshop-create.html',
+        controller: 'JerkProductsCtrl'
       })
+      .when('/product/:id', {
+        templateUrl: 'views/jerkshop-detail.html',
+        controller: 'JerkProductCtrl'
+      })
+      .when('/product/:id/edit', {
+        templateUrl: 'views/jerkshop-editDetail.html',
+        controller: 'JerkProductCtrl'
+      })
+
+
+
+      // .when ('/admin', {
+      //   templateUrl: 'views/admin-main.html',
+      //   controller: 'AdminsCtrl'
+      // })
+      // .when ('/jerkshop', {
+      //   templateUrl: 'views/jerkshop.html',
+      //   controller: 'AdminsCtrl'
+      // })
+      // .when('/admin/:id', {
+      //   templateUrl: 'views/jerkshop-detail.html',
+      //   controller: 'AdminCtrl'
+      // })
+      // .when('/admin/:id/edit', {
+      //   templateUrl: 'views/jerkshop-editDetail.html',
+      //   controller: 'AdminCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });
