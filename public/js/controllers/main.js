@@ -32,7 +32,7 @@ angular.module('JerkStoreApp')
       $location.path('/admin');
     };
     $scope.newProduct = function(product) {
-      AdminSvc.create(product)
+      AdminSvc.newProduct(product)
       $location.path('/jerkshop');
     };
     $scope.product = AdminSvc.query();
