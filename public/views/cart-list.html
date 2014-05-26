@@ -1,0 +1,31 @@
+<div class="jerkCart">
+<img src="http://s3-ec.buzzfed.com/static/2014-05/enhanced/webdr06/7/13/anigif_enhanced-9193-1399483433-2.gif" alt="">
+
+<h1>Jerk Cart</h1>
+
+</div>
+
+<div class="productlist">
+
+<img src="" class="jerkHeader" alt="">
+<br>
+<br>
+<button class="headerbtn" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
+
+
+<section data-ng-repeat="product in products">
+
+	<h1>{{product.name}}</h1>
+	<h2>{{product.price | currency}}</h2>
+	<h2>{{product.preview}}</h2>
+	<h2><img src="{{product.image1}}"></h2>
+	<h2><img src="{{product.image2}}"></h2>
+	<h2><img src="{{product.image3}}"></h2>
+	<h2>{{product.description}}</h2>
+
+	<a href="#/product/{{product._id}}">Update Quanity</a>
+	<hr>
+
+</section>
+</div>
+

@@ -1,0 +1,23 @@
+<h1>Jerk Store Edit Detail</h1>
+
+<hr>
+
+<div class="changingbuttonz">
+
+<p>Edit this Jerk Post!</p>
+
+<ul>
+<li><input type="text" data-ng-model="product.name" value="{{product.name}}"></li>
+<li><input type="text" data-ng-model="product.price" value="{{product.price}}"></li>
+<li><textarea data-ng-model="product.preview">{{product.preview}}</textarea></li>
+<li><input type="url" data-ng-model="product.image1" value="{{product.image1}}"></li>
+<li><input type="url" data-ng-model="product.image2" value="{{product.image2}}"></li>
+<li><input type="url" data-ng-model="product.image3" value="{{product.image3}}"></li>
+<li><textarea data-ng-model="product.description">{{product.description}}</textarea></li>
+
+<button data-ng-click="edit()">Complete Update Jerk</button>
+
+</ul>
+
+
+</div>

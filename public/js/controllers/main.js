@@ -28,7 +28,7 @@ angular.module('JerkStoreApp')
   	};
   }) 
 
-  //controller for admin 
+  //controller for admin- CRUD products
 
   angular.module('JerkStoreApp')
   .controller('JerkProductsCtrl', function ($scope, $location, JerkProductsSvc) {
@@ -53,7 +53,7 @@ angular.module('JerkStoreApp')
       JerkProductSvc.edit($scope.product);
       $location.path('/product');
     };
-  });
+  })
 
   //controller for shopping cart 
 
