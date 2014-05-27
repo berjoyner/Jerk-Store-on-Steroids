@@ -60,10 +60,10 @@ angular.module('JerkStoreApp')
       JerkProductSvc.edit($scope.product);
       $location.path('/product');
     };
-    $scope.edit = function(product) {
+    $scope.editCart = function(product) {
       JerkProductSvc.edit(product);
     };
-    $scope.delete = function(product) {
+    $scope.deleteCart = function(product) {
       product.cart = false;
 
       $scope.edit(product);
@@ -86,7 +86,7 @@ angular.module('JerkStoreApp')
     
     for(var i = 0; i < productz.length; i++) {
       if(productz[0].cart === false) {
-        productz.splice(i,1);
+        productz.splice(i,1); //promises in javascript?
 
       }
 
