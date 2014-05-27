@@ -10,7 +10,7 @@
 <img src="" class="jerkHeader" alt="">
 <br>
 <br>
-<button class="headerbtn" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
+<button class="headerbtn btn btn-info" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
 
 
 <section data-ng-repeat="product in products">
@@ -20,9 +20,8 @@
 	<h2><img src="{{product.image1}}"></h2>
 	<h2>Quantity:{{product.quantity}}</h2>
 
-	<a href="#/cart/{{product._id}}">Update Quantity</a>
+	<button class="btn btn-warning"><a href="#/cart/{{product._id}}">Update Quantity</a></button>
 	<hr>
 
 </section>
 </div>
-

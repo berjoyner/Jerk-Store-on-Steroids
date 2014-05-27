@@ -5,7 +5,9 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
+    // 'JerkStoreApp.directives',
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -64,3 +66,5 @@ angular
         redirectTo: '/'
       });
   });
+
+// angular.module('JerkStoreApp.directives', []);

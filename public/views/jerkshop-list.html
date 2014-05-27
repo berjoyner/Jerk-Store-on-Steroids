@@ -3,7 +3,7 @@
 <img src="images/jerkstore.png" class="jerkHeader" alt="">
 <br>
 <br>
-<button class="headerbtn" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
+<button class="headerbtn btn btn-info" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
 
 
 <section data-ng-repeat="product in products">
@@ -16,11 +16,10 @@
 	<h2><img src="{{product.image3}}"></h2>
 	<h2>{{product.description}}</h2>
 
-	<button data-ng-click="updateCart(product)"><a ng-href="#/cart" class="glyphicon glyphicon-shopping-cart">Add To Cart</a></button>
+	<input type="text" data-ng-model="product.quantity" value="{{product.quantity}}"><button class="btn btn-success" data-ng-click="updateCart(product)"><a ng-href="#/cart" class="glyphicon glyphicon-shopping-cart">Add Quantity To Cart</a></button>
 
-	<a href="#/product/{{product._id}}">Update Jerk</a>
+	<button class="btn btn-warning"><a href="#/product/{{product._id}}">Update Jerk</a></button>
 	<hr>
 
 </section>
 </div>
-

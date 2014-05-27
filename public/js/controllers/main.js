@@ -8,24 +8,24 @@ angular.module('JerkStoreApp')
 
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
     $scope.createPost = function() {
-    	$location.path('/new');
+      $location.path('/new');
     };
     $scope.newPost = function(post) {
-    	PostsSvc.create(post)
-    	$location.path('/blog');
+      PostsSvc.create(post)
+      $location.path('/blog');
     };
     $scope.posts = PostsSvc.query();
   })
   .controller('PostCtrl', function($scope, $location, $routeParams, PostSvc) {
-  	$scope.post = PostSvc.show({ id: $routeParams.id });
-  	$scope.delete = function() { 
-  		PostSvc.delete({ id: $routeParams.id });
-  		$location.path('/blog');
-  	};
-  	$scope.edit = function() {
-  		PostSvc.edit($scope.post);
-  		$location.path('/blog');
-  	};
+    $scope.post = PostSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
+      PostSvc.delete({ id: $routeParams.id });
+      $location.path('/blog');
+    };
+    $scope.edit = function() {
+      PostSvc.edit($scope.post);
+      $location.path('/blog');
+    };
   }) 
 
   //controller for admin- CRUD products
@@ -43,7 +43,7 @@ angular.module('JerkStoreApp')
 
     $scope.updateCart = function(product) {
       product.cart = true;
-      JerkProductSvc.edit(product);
+      JerkProductSvc.edit(products);
 
       console.log(product);
     }
@@ -64,7 +64,7 @@ angular.module('JerkStoreApp')
       JerkProductSvc.edit(product);
     };
     $scope.deleteCart = function(product) {
-      product.cart = false;
+      // product.cart = false;
 
       $scope.edit(product);
     };
@@ -85,7 +85,7 @@ angular.module('JerkStoreApp')
     var productz = JerkProductsSvc.query();
     
     for(var i = 0; i < productz.length; i++) {
-      if(productz[0].cart === false) {
+      if(productz[i].cart === false) {
         productz.splice(i,1); //promises in javascript?
 
       }
@@ -110,6 +110,4 @@ angular.module('JerkStoreApp')
 
 
   //controller for reviews
-
-
 

@@ -7,10 +7,10 @@
 	<h3>{{product.price | currency}}</h3>
 	<h3>{{product.preview}}</h3>
 	<h3><img src="{{product.image1}}"></h3>
-	
+
 
 </section>
 <input type="text" data-ng-model="product.quantity" value="{{product.quantity}}">
-<a href="#/cart" ng-click="editCart(product)">Save</a> | <a href="#/cart" ng-click="deleteCart(product)">Delete From Cart</a>
+<button class="btn btn-success"><a href="#/cart" ng-click="editCart(product)">Modify Quantity</a></button> | <button class="btn btn-danger"><a href="#/cart" ng-click="deleteCart(product)">Delete From Cart</a></button>
 
 </div>
