@@ -31,7 +31,7 @@ angular.module('JerkStoreApp')
   //controller for admin- CRUD products
 
   angular.module('JerkStoreApp')
-  .controller('JerkProductsCtrl', function ($scope, $location, JerkProductsSvc) {
+  .controller('JerkProductsCtrl', function ($scope, $location, JerkProductsSvc, JerkProductSvc) {
 
     $scope.createProduct = function() {
       $location.path('/newproduct');
@@ -40,6 +40,13 @@ angular.module('JerkStoreApp')
       JerkProductsSvc.create(product)
       $location.path('/product');
     };
+
+    $scope.updateCart = function(product) {
+      product.cart = true;
+      JerkProductSvc.edit(product);
+
+      console.log(product);
+    }
     $scope.products = JerkProductsSvc.query();
   })
   .controller('JerkProductCtrl', function($scope, $location, $routeParams, JerkProductSvc) {
@@ -53,12 +60,20 @@ angular.module('JerkStoreApp')
       JerkProductSvc.edit($scope.product);
       $location.path('/product');
     };
+    $scope.edit = function(product) {
+      JerkProductSvc.edit(product);
+    };
+    $scope.delete = function(product) {
+      product.cart = false;
+
+      $scope.edit(product);
+    };
   })
 
   //controller for shopping cart 
 
   angular.module('JerkStoreApp')
-  .controller('JerkCartsCtrl', function ($scope, $location, JerkCartsSvc) {
+  .controller('JerkCartsCtrl', function ($scope, $location, JerkProductsSvc) {
 
     $scope.createCart = function() {
       $location.path('/newcart');
@@ -67,7 +82,18 @@ angular.module('JerkStoreApp')
       JerkCartsSvc.create(cart)
       $location.path('/cart');
     };
-    $scope.carts = JerkCartsSvc.query();
+    var productz = JerkProductsSvc.query();
+    
+    for(var i = 0; i < productz.length; i++) {
+      if(productz[0].cart === false) {
+        productz.splice(i,1);
+
+      }
+
+    }
+
+    $scope.products = productz;
+
   })
   .controller('JerkCartCtrl', function($scope, $location, $routeParams, JerkCartSvc) {
 

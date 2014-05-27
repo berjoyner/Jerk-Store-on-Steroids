@@ -14,16 +14,14 @@
 
 
 <section data-ng-repeat="product in products">
-
 	<h1>{{product.name}}</h1>
 	<h2>{{product.price | currency}}</h2>
 	<h2>{{product.preview}}</h2>
 	<h2><img src="{{product.image1}}"></h2>
-	<h2><img src="{{product.image2}}"></h2>
-	<h2><img src="{{product.image3}}"></h2>
 	<h2>{{product.description}}</h2>
+	<h2>Quantity:{{product.quantity}}</h2>
 
-	<a href="#/product/{{product._id}}">Update Quanity</a>
+	<a href="#/cart/{{product._id}}">Update Quantity</a>
 	<hr>
 
 </section>

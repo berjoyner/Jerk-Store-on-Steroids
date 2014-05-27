@@ -54,11 +54,11 @@ angular
       })
       .when('/cart/:id', {
         templateUrl: 'views/cart-detail.html',
-        controller: 'JerkCartCtrl'
+        controller: 'JerkProductCtrl'
       })
       .when('/cart/:id/edit', {
         templateUrl: 'views/cart-editDetail.html',
-        controller: 'JerkCartCtrl'
+        controller: 'JerkProductCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -1,5 +1,5 @@
 <div class="editbuttonz">
-<h1>Jerk Detail</h1>
+<h1>Cart Detail</h1>
 <hr>
 
 <section>
@@ -7,11 +7,10 @@
 	<h3>{{product.price | currency}}</h3>
 	<h3>{{product.preview}}</h3>
 	<h3><img src="{{product.image1}}"></h3>
-	<h3><img src="{{product.image2}}"></h3>
-	<h3><img src="{{product.image3}}"></h3>
 	<h3>{{product.description}}</h3>
-</section>
 
-<a href="#/product/{{product._id}}/edit">Edit Jerk</a> | <a ng-click="delete()">Delete Jerk</a>
+</section>
+<input type="text" data-ng-model="product.quantity" value="{{product.quantity}}">
+<a href="#/cart" ng-click="edit(product)">Save</a> | <a href="#/cart" ng-click="delete(product)">Delete From Cart</a>
 
 </div>
