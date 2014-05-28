@@ -30,38 +30,64 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
-       .when('/product', {
+      .when('/shop', {
         templateUrl: 'views/jerkshop-list.html',
-        controller: 'JerkProductsCtrl'
+        controller: 'JerksCtrl'
       })
-      .when('/newProduct', {
-        templateUrl: 'views/jerkshop-create.html',
-        controller: 'JerkProductsCtrl'
-      })
-      .when('/product/:id', {
+      .when('/shop/:id', {
         templateUrl: 'views/jerkshop-detail.html',
-        controller: 'JerkProductCtrl'
+        controller: 'JerkCtrl'
       })
-      .when('/product/:id/edit', {
+      .when('/shop/:id/edit', {
         templateUrl: 'views/jerkshop-editDetail.html',
-        controller: 'JerkProductCtrl'
+        controller: 'JerkCtrl'
       })
       .when('/cart', {
         templateUrl: 'views/cart-list.html',
-        controller: 'JerkCartsCtrl'
+        controller: 'CartJerksCtrl'
       })
-      .when('/newCart', {
-        templateUrl: 'views/cart-create.html',
-        controller: 'JerkCartsCtrl'
-      })
-      .when('/cart/:id', {
-        templateUrl: 'views/cart-detail.html',
-        controller: 'JerkProductCtrl'
-      })
-      .when('/cart/:id/edit', {
-        templateUrl: 'views/cart-editDetail.html',
-        controller: 'JerkProductCtrl'
-      })
+      // .when('/newcart', {
+      //   templateUrl: 'views/cart-create.html',
+      //   controller: 'CartItemsCtrl'
+      // .when('/cart/:id/edit', {
+      //   templateUrl: 'views/cart-editDetail.html',
+      //   controller: 'CartItemsCtrl'
+      // })
+
+//original
+
+      //  .when('/product', {
+      //   templateUrl: 'views/jerkshop-list.html',
+      //   controller: 'JerkProductsCtrl'
+      // })
+      // .when('/newProduct', {
+      //   templateUrl: 'views/jerkshop-create.html',
+      //   controller: 'JerkProductsCtrl'
+      // })
+      // .when('/product/:id', {
+      //   templateUrl: 'views/jerkshop-detail.html',
+      //   controller: 'JerkProductCtrl'
+      // })
+      // .when('/product/:id/edit', {
+      //   templateUrl: 'views/jerkshop-editDetail.html',
+      //   controller: 'JerkProductCtrl'
+      // })
+      // .when('/cart', {
+      //   templateUrl: 'views/cart-list.html',
+      //   controller: 'JerkCartsCtrl'
+      // })
+      // .when('/newCart', {
+      //   templateUrl: 'views/cart-create.html',
+      //   controller: 'JerkCartsCtrl'
+      // })
+      // .when('/cart/:id', {
+      //   templateUrl: 'views/cart-detail.html',
+      //   controller: 'JerkProductCtrl'
+      // })
+      // .when('/cart/:id/edit', {
+      //   templateUrl: 'views/cart-editDetail.html',
+      //   controller: 'JerkProductCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });

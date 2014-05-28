@@ -2,8 +2,16 @@
 
 <p>All the Cool Jerks Are Doing It!</p>
 
-<button data-ng-click="createPost()">Yes! Create New Post</button>
-<button data-ng-click="backMain()"><a ng-href="#">No! Go Back</a></button>
+<button class="btn btn-success" data-ng-click="createPost()">Yes! Create New Post</button>
+<button class="btn btn-danger" data-ng-click="backMain()"><a ng-href="#">No! Go Back</a></button>
+<br>
+<br>
+<div class="CollapseBlog">
+	<button class="btn btn-info" ng-click="isCollapsed = !isCollapsed">Collapse Blog Posts</button>
+	<hr>
+	<div collapse="isCollapsed">
+		<div class="well well-lg">
+	
 
 <section data-ng-repeat="post in posts">
 	<h3>{{post.title}}</h3>
@@ -11,4 +19,9 @@
 	<a href="#/blog/{{post._id}}">View Post</a>
 </section>
 
+</div> 
+
+</div>
+
+</div>
 </div>

@@ -44,7 +44,8 @@ angular.module('JerkStoreApp')
 			{},
 			{
 				query: { method: 'GET', isArray: true },
-				create: { method: 'POST'}
+				// calvin changed method to addProduct
+				addProduct: { method: 'POST'}
 			});
 	})
 	.factory('JerkCartSvc', function($resource) {
