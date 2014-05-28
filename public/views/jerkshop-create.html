@@ -3,6 +3,11 @@
 
 <h1>Admin Jerks ONLY: Add New Products</h1>
 
+<div class="CollapseBlog">
+	<button class="btn btn-info" ng-click="isCollapsed = !isCollapsed">ADMIN ACCESS</button>
+	<hr>
+	<div collapse="!isCollapsed">
+		<div class="well well-lg">
 <hr>
  <ul>
 <li><input type="text" data-ng-model="product.name" placeholder="Name"></li>
@@ -16,4 +21,8 @@
 <button class="btn btn-default" data-ng-click="newProduct(product)">Add New Product</button>
 <button class="btn btn-default" data-ng-click="backMain()"><a ng-href="#">Go Back</a></button>
 </ul>
+
+</div>
+</div>
+</div>
 </div>

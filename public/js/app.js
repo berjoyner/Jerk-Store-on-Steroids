@@ -6,8 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'ui.bootstrap'
-    // 'JerkStoreApp.directives',
+    'ui.bootstrap',
+    'JerkStoreApp.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -67,5 +67,5 @@ angular
       });
   });
 
-// angular.module('JerkStoreApp.directives', []);
+angular.module('JerkStoreApp.directives', []);
 

@@ -13,7 +13,7 @@
 <button class="headerbtn btn btn-info" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
 
 
-<section data-ng-repeat="product in products">
+<section data-ng-repeat="product in cartProducts">
 	<h1>{{product.name}}</h1>
 	<h2>{{product.price | currency}}</h2>
 	<h2>{{product.preview}}</h2>
