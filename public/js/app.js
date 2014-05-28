@@ -30,29 +30,44 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
-      .when('/shop', {
+       .when('/product', {
         templateUrl: 'views/jerkshop-list.html',
-        controller: 'JerksCtrl'
+        controller: 'JerkProductsCtrl'
       })
-      .when('/shop/:id', {
+      .when('/newProduct', {
+        templateUrl: 'views/jerkshop-create.html',
+        controller: 'JerkProductsCtrl'
+      })
+      .when('/product/:id', {
         templateUrl: 'views/jerkshop-detail.html',
-        controller: 'JerkCtrl'
+        controller: 'JerkProductCtrl'
       })
-      .when('/shop/:id/edit', {
+      .when('/product/:id/edit', {
         templateUrl: 'views/jerkshop-editDetail.html',
-        controller: 'JerkCtrl'
+        controller: 'JerkProductCtrl'
       })
       .when('/cart', {
         templateUrl: 'views/cart-list.html',
-        controller: 'CartJerksCtrl'
+        controller: 'JerkCartsCtrl'
       })
-      // .when('/newcart', {
-      //   templateUrl: 'views/cart-create.html',
-      //   controller: 'CartItemsCtrl'
-      // .when('/cart/:id/edit', {
-      //   templateUrl: 'views/cart-editDetail.html',
-      //   controller: 'CartItemsCtrl'
-      // })
+      .when('/newCart', {
+        templateUrl: 'views/cart-create.html',
+        controller: 'JerkCartsCtrl'
+      })
+      .when('/cart/:id', {
+        templateUrl: 'views/cart-detail.html',
+        controller: 'JerkProductCtrl'
+      })
+      .when('/cart/:id/edit', {
+        templateUrl: 'views/cart-editDetail.html',
+        controller: 'JerkProductCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
+
+// angular.module('JerkStoreApp.directives', []);
 
 //original
 
@@ -88,9 +103,9 @@ angular
       //   templateUrl: 'views/cart-editDetail.html',
       //   controller: 'JerkProductCtrl'
       // })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  //     .otherwise({
+  //       redirectTo: '/'
+  //     });
+  // });
 
 // angular.module('JerkStoreApp.directives', []);

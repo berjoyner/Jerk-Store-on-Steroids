@@ -5,6 +5,7 @@
 <br>
 <button class="headerbtn btn btn-info" data-ng-click="backMain()"><a ng-href="#">Go Home</a></button>
 
+
 <section data-ng-repeat="product in products">
 
 	<h1>{{product.name}}</h1>
@@ -25,6 +26,7 @@
       </carousel>
     </div> 
   </div>
+
 	<!-- <h2><img src="{{product.image1}}"></h2>
 	<h2><img src="{{product.image2}}"></h2>
 	<h2><img src="{{product.image3}}"></h2> -->
@@ -34,13 +36,11 @@
 	<div ng-controller="JerkCartsCtrl">
 	<button class="btn btn-success" data-ng-click="addToCart(product)">Add to Cart (with quantity)</button>
 </div>
-
 	<button class="btn btn-warning"><a href="#/product/{{product._id}}">Update Jerk</a></button>
 	<hr>
 
 </section>
 </div>
-
 
 
 
@@ -86,7 +86,7 @@
 
 <!-- //original  -->
 
-<section data-ng-repeat="product in products">
+<!-- <section data-ng-repeat="product in products">
 
 	<h1>{{product.name}}</h1>
 	<h2>{{product.price | currency}}</h2>
@@ -118,3 +118,4 @@
 
 </section> 
 </div>
+ -->

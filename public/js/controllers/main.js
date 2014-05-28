@@ -31,7 +31,7 @@ angular.module('JerkStoreApp')
   //controller for admin- CRUD products
 
   angular.module('JerkStoreApp')
-  .controller('JerkProductsCtrl', function ($scope, $location, JerkProductsSvc) {
+  .controller('JerkProductsCtrl', function ($scope, $location, JerkProductsSvc, JerkProductSvc) {
 
     $scope.createProduct = function() {
       $location.path('/newproduct');
@@ -41,12 +41,12 @@ angular.module('JerkStoreApp')
       $location.path('/product');
     };
 
-    // $scope.updateCart = function(product) {
-    //   product.cart = true;
-    //   JerkProductSvc.edit(products);
+    $scope.updateCart = function(product) {
+      product.cart = true;
+      JerkProductSvc.edit(products);
 
-    //   console.log(product);
-    // }
+      console.log(product);
+    }
     $scope.products = JerkProductsSvc.query();
   })
   .controller('JerkProductCtrl', function($scope, $location, $routeParams, JerkProductSvc) {
@@ -60,15 +60,15 @@ angular.module('JerkStoreApp')
       JerkProductSvc.edit($scope.product);
       $location.path('/product');
     };
-  //   $scope.editCart = function(product) {
-  //     JerkProductSvc.edit(product);
-  //   };
-  //   $scope.deleteCart = function(product) {
-  //     // product.cart = false;
+    $scope.editCart = function(product) {
+      JerkProductSvc.edit(product);
+    };
+    $scope.deleteCart = function(product) {
+      // product.cart = false;
 
-  //     $scope.edit(product);
-  //   };
-  // })
+      $scope.edit(product);
+    };
+  })
 
   //controller for shopping cart 
 
@@ -78,8 +78,8 @@ angular.module('JerkStoreApp')
     $scope.createCart = function() {
       $location.path('/newcart');
     };
-    $scope.newCart = function(product) {
-      JerkCartsSvc.create(product)
+    $scope.newCart = function(cart) {
+      JerkCartsSvc.create(cart)
       $location.path('/cart');
     };
     // calvin demoing the add to cart from products list
